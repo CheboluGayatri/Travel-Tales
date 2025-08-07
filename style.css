@@ -1,0 +1,195 @@
+/* General Styles */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  background: #fff;
+  color: #333;
+}
+
+h1, h2, h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+p {
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+  line-height: 1.6;
+}
+
+/* Navigation */
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #0056b3;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #ff6600;
+}
+
+/* Hero Banner */
+.hero {
+  background: url('banner.jpg') no-repeat center center/cover;
+  padding: 80px 20px;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+}
+
+/* Cards Section */
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: #f9f9f9;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 10px;
+  font-size: 1.2em;
+}
+
+.card p {
+  padding: 0 10px 20px 10px;
+}
+
+/* About and Contact Combined Section */
+#about-contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 60px 20px;
+  background-color: #f5f5f5;
+}
+
+/* Individual About and Contact Containers */
+.about, .contact {
+  flex: 1 1 400px;
+  max-width: 600px;
+}
+
+.about h2, .contact h2 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.about p {
+  font-size: 1em;
+  text-align: justify;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* Form Styling */
+form {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #333;
+}
+
+form input, form textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form button {
+  padding: 12px;
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 1em;
+}
+
+form button:hover {
+  background-color: #e65c00;
+}
+
+/* Mobile Responsive Layout */
+@media (max-width: 768px) {
+  #about-contact {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
+  .about, .contact {
+    max-width: 100%;
+  }
+
+  .about h2, .contact h2 {
+    text-align: center;
+  }
+
+  form {
+    padding: 20px;
+  }
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+}
+
+footer a {
+  color: #ffcc00;
+  text-decoration: none;
+}
