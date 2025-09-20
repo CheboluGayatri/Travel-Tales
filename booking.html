@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Trip - Travel-Tales</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Travel-Tales</a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link"><b>Home</b></a></li>
+                <li><a href="destinations.html" class="nav-link"><b>Destinations</b></a></li>
+                <li><a href="about.html" class="nav-link"><b>About</b></a></li>
+                <li><a href="contact.html" class="nav-link"><b>Contact</b></a></li>
+                <li><a href="booking.html" class="nav-link active"><b>Book Now</b></a></li>
+            </ul>
+                <div class="nav-toggle" id="mobile-menu">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="page-header">
+                <h1 class="page-title">Book Your Adventure</h1>
+                <p class="page-subtitle" style="color: #666;">Fill out the form below to start planning your perfect getaway</p>
+            </div>
+            
+            <div class="form-container">
+                <form id="booking-form">
+                    <!-- Personal Information -->
+                    <h3 style="margin-bottom: 1.5rem; color: #667eea; border-bottom: 2px solid #eee; padding-bottom: 0.5rem;">Personal Information</h3>
+                    
+                    <div class="form-group">
+                        <label for="booking-name" class="form-label">Full Name *</label>
+                        <input type="text" id="booking-name" name="booking-name" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="booking-email" class="form-label">Email Address *</label>
+                        <input type="email" id="booking-email" name="booking-email" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="booking-phone" class="form-label">Phone Number *</label>
+                        <input type="tel" id="booking-phone" name="booking-phone" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="nationality" class="form-label">Nationality *</label>
+                        <input type="text" id="nationality" name="nationality" class="form-input" required placeholder="e.g., American, British, etc.">
+                    </div>
+                    
+                    <!-- Trip Details -->
+                    <h3 style="margin: 2rem 0 1.5rem; color: #667eea; border-bottom: 2px solid #eee; padding-bottom: 0.5rem;">Trip Details</h3>
+                    
+                    <div class="form-group">
+                        <label for="destination" class="form-label">Choose Destination *</label>
+                        <select>
+                        <option value="">Select a destination</option>
+                        <option value="santorini">Santorini, Greece - ₹85,999/-</option>
+                         <option value="12-Jyothirlingas">12 Jyotirlingas - ₹1,40,499/-</option>
+                         <option value="Famous-Temples">Famous Temples - ₹35,999/-</option>
+                         <option value="18-shakti-peethas-pilgrimage-to-power-v0-pil3moxnw8ma1">18 Shakti Peethas - ₹2,20,799/-</option>
+                          <option value="world-wonders">World Wonders Tour Package - ₹4,75,000/-</option>
+                         <option value="waterfalls">Magical Waterfalls - ₹25,499/-</option>
+                        <option value="custom">Custom Destination (Contact Us)</option>
+                         </select>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div class="form-group">
+                            <label for="departure-date" class="form-label">Departure Date *</label>
+                            <input type="date" id="departure-date" name="departure-date" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="return-date" class="form-label">Return Date</label>
+                            <input type="date" id="return-date" name="return-date" class="form-input">
+                        </div>
+                    </div>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div class="form-group">
+                            <label for="travelers" class="form-label">Number of Travelers *</label>
+                            <select id="travelers" name="travelers" class="form-select" required>
+                                <option value="">Select number of travelers</option>
+                                <option value="1">1 Traveler</option>
+                                <option value="2">2 Travelers</option>
+                                <option value="3">3 Travelers</option>
+                                <option value="4">4 Travelers</option>
+                                <option value="5">5 Travelers</option>
+                                <option value="6">6 Travelers</option>
+                                <option value="more">More than 6 travelers</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="room-type" class="form-label">Room Preference *</label>
+                            <select id="room-type" name="room-type" class="form-select" required>
+                                <option value="">Select room type</option>
+                                <option value="single">Single Room</option>
+                                <option value="double">Double Room</option>
+                                <option value="twin">Twin Beds</option>
+                                <option value="suite">Suite</option>
+                                <option value="family">Family Room</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!-- Travel Preferences -->
+                    <h3 style="margin: 2rem 0 1.5rem; color: #667eea; border-bottom: 2px solid #eee; padding-bottom: 0.5rem;">Travel Preferences</h3>
+                    
+                    <div class="form-group">
+                        <label for="budget" class="form-label">Budget Range (Optional)</label>
+                        <select id="budget" name="budget" class="form-select">
+                            <option value="">Select budget range</option>
+                            <option value="budget">Budget: Under 100000 per person</option>
+                            <option value="mid-range">Mid-range: 200000 - 500000 per person</option>
+                            <option value="luxury">Luxury: 500000 - 1000000 per person</option>
+                            <option value="ultra-luxury">Ultra-luxury: Over 1000000 per person</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="interests" class="form-label">Interests & Activities (Select all that apply)</label>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.5rem; margin-top: 0.5rem;">
+                            <label style="font-weight: normal;"><input type="checkbox" name="interests" value="adventure"> Adventure Sports</label>
+                            <label style="font-weight: normal;"><input type="checkbox" name="interests" value="culture"> Cultural Experiences</label>
+                            <label style="font-weight: normal;"><input type="checkbox" name="interests" value="food"> Food & Wine</label>
+                            <label style="font-weight: normal;"><input type="checkbox" name="interests" value="nature"> Nature & Wildlife</label>
+                            <label style="font-weight: normal;"><input type="checkbox" name="interests" value="relaxation"> Relaxation & Spa</label>
+                            <label style="font-weight: normal;"><input type="checkbox" name="interests" value="photography"> Photography</label>
+                            <label style="font-weight: normal;"><input type="checkbox" name="interests" value="nightlife"> Nightlife & Entertainment</label>
+                            <label style="font-weight: normal;"><input type="checkbox" name="interests" value="shopping"> Shopping</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="dietary" class="form-label">Dietary Restrictions</label>
+                        <select id="dietary" name="dietary" class="form-select">
+                            <option value="">No dietary restrictions</option>
+                            <option value="vegetarian">Vegetarian</option>
+                            <option value="vegan">Vegan</option>
+                            <option value="gluten-free">Gluten-free</option>
+                            <option value="halal">Halal</option>
+                            <option value="kosher">Kosher</option>
+                            <option value="other">Other (specify in special requests)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="special-requests" class="form-label">Special Requests & Additional Information</label>
+                        <textarea id="special-requests" name="special-requests" class="form-textarea" placeholder="Any special requests, accessibility needs, celebration occasions, medical requirements, or additional information we should know..."></textarea>
+                    </div>
+                    
+                    <!-- Terms and Conditions -->
+                    <div class="form-group">
+                        <label style="display: flex; align-items: flex-start; gap: 0.5rem;">
+                            <input type="checkbox" required style="margin-top: 0.2rem;"> 
+                            <span>I agree to the <a href="#" style="color: #667eea;">Terms and Conditions</a> and <a href="#" style="color: #667eea;">Privacy Policy</a></span>
+                        </label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label style="display: flex; align-items: flex-start; gap: 0.5rem;">
+                            <input type="checkbox" style="margin-top: 0.2rem;"> 
+                            <span>I would like to receive travel tips, exclusive offers, and updates from Travel-Tales</span>
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn" style="width: 100%; padding: 1rem; font-size: 1.1rem;">Submit Booking Request</button>
+                    
+                    <div style="margin-top: 1.5rem; text-align: center; color: #666; font-size: 0.9rem; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
+                        <strong>Important:</strong> This is a booking request. Our travel experts will contact you within 24 hours to confirm your reservation, discuss payment options, and finalize your itinerary. No charges will be made until you approve the final booking details.
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Process Steps -->
+            <div style="margin-top: 4rem; background: white; padding: 3rem; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
+                <h2 style="text-align: center; margin-bottom: 3rem;">Your Booking Process</h2>
+                <div class="features-grid">
+                    <div class="feature-card" style="text-align: left;">
+                        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                            <div style="background: #667eea; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 1rem;">1</div>
+                            <h3>Submit Request</h3>
+                        </div>
+                        <p>Fill out the booking form with your travel preferences and requirements.</p>
+                    </div>
+                    <div class="feature-card" style="text-align: left;">
+                        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                            <div style="background: #667eea; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 1rem;">2</div>
+                            <h3>Expert Consultation</h3>
+                        </div>
+                        <p>Our travel expert will contact you within 24 hours to discuss and customize your itinerary.</p>
+                    </div>
+                    <div class="feature-card" style="text-align: left;">
+                        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                            <div style="background: #667eea; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 1rem;">3</div>
+                            <h3>Confirm & Pay</h3>
+                        </div>
+                        <p>Review your custom itinerary, confirm details, and secure your booking with payment.</p>
+                    </div>
+                    <div class="feature-card" style="text-align: left;">
+                        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                            <div style="background: #667eea; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 1rem;">4</div>
+                            <h3>Travel Support</h3>
+                        </div>
+                        <p>Receive all travel documents and enjoy 24/7 support throughout your journey.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Need Help -->
+            <div style="margin-top: 3rem; text-align: center; padding: 2rem; background: linear-gradient(135deg, #667eea, #667eea); color: white; border-radius: 15px;">
+                <h3>Need Help with Your Booking?</h3>
+                <p style="margin: 1rem 0;">Our travel experts are here to assist you with any questions or special requirements.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem;">
+                    <a href="contact.html" class="btn" style="background: white; color: #667eea;">Contact Us</a>
+                    <a href="tel:+15551234567" class="btn" style="background: rgba(255,255,255,0.2); border: 2px solid white;">Call Now</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Travel-Tales. All rights reserved. | Discover the world with us.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

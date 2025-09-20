@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Travel-Tales</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    /* Navbar */
+    .navbar {
+       background: linear-gradient(135deg, #42a5f5, #1e88e5);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color:  white;
+      text-decoration: none;
+    }
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+    .nav-menu li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    .nav-menu li a.active,
+    .nav-menu li a:hover {
+      color: white;
+    }
+    .mobile-menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    .hamburger {
+      width: 25px;
+      height: 3px;
+      background: #333;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      position: relative;
+      width: 100%;
+      height: 60vh;
+      background: url("https://cdn.wallpapersafari.com/78/25/JU9bGD.jpg") no-repeat center/cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+    }
+    .hero-section::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.4);
+    }
+    .hero-section h1,
+    .hero-section p {
+      position: relative;
+      z-index: 1;
+    }
+    .hero-section h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .hero-section p {
+      font-size: 1.2rem;
+      max-width: 600px;
+    }
+
+    /* Main Content */
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 3rem 2rem;
+    }
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+    .about-card {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+    .about-card:hover {
+      transform: translateY(-5px);
+    }
+    .about-card h2 {
+      color: #1e3c72;
+      margin-bottom: 1rem;
+    }
+
+    .about-card p {
+      color: #666;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      text-align: center;
+      padding: 3rem 2rem;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: #fff;
+      border-radius: 12px;
+      margin-top: 3rem;
+    }
+    .cta-buttons {
+      margin-top: 1.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .btn {
+      text-decoration: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 30px;
+      font-weight: 600;
+      border: 2px solid #fff;
+      transition: all 0.3s ease;
+      color: #fff;
+    }
+    .btn.primary {
+      background: #fff;
+      color: #1e3c72;
+    }
+    .btn:hover {
+      opacity: 0.8;
+    }
+
+    /* Footer */
+    .footer {
+      background: #1e3c72;
+      color: #fff;
+      padding: 3rem 2rem;
+      margin-top: 3rem;
+    }
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .footer-section h3 {
+      margin-bottom: 1rem;
+    }
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+    }
+    .footer-section ul li {
+      margin-bottom: 0.5rem;
+    }
+    .footer-section ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+    .footer-bottom {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-menu {
+        display: none;
+        flex-direction: column;
+        background: linear-gradient(135deg, #42a5f5, #1e88e5);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .nav-menu.active {
+        display: flex;
+      }
+
+      .mobile-menu-toggle {
+        display: flex;
+      }
+
+      .nav-menu li a {
+        text-align: center;
+        padding: 0.5rem 0;
+      }
+
+      .about-content {
+        grid-template-columns: 1fr;
+      }
+      .team-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero-section h1 {
+        font-size: 2.2rem;
+      }
+      .hero-section p {
+        font-size: 1rem;
+      }
+    }
+    @media (max-width: 480px) {
+    .hero {
+        height: 60vh;
+        margin: 0 -20px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .form-container {
+        margin: 2rem 15px;
+    }
+
+    .page-title {
+        font-size: 2rem;
+    }
+}
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Travel-Tales</a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html"><b>Home</b></a></li>
+        <li><a href="destinations.html"><b>Destinations</b></a></li>
+        <li><a href="about.html" class="active"><b>About</b></a></li>
+        <li><a href="contact.html"><b>Contact</b></a></li>
+        <li><a href="booking.html"><b>Book Now</b></a></li>
+      </ul>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle">
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <h1>About Travel-Tales</h1>
+    <p style="color: white;">Crafting extraordinary travel experiences that create memories to last a lifetime. Your journey to luxury begins here.</p>
+  </section>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="container">
+      <!-- About Content -->
+      <section class="about-content">
+        <div class="about-card">
+          <h2>Our Story</h2>
+          <p style="color: #666;">Founded in 2018, Travel-Tales emerged from a passion for creating unforgettable travel experiences. What started as a small boutique agency has grown into a premier luxury travel company, serving discerning travelers who seek authenticity, comfort, and exclusivity.</p>
+        </div>
+        <div class="about-card">
+          <h2>Our Mission</h2>
+          <p style="color: #666;">To transform the way people experience the world by curating exceptional, personalized luxury travel experiences that go beyond expectations. We're not just planning trips – we're crafting life-changing adventures.</p>
+        </div>
+        <div class="about-card">
+          <h2>What Sets Us Apart</h2>
+          <p style="color: #666;">Our team of expert travel curators brings decades of combined experience in luxury hospitality and destination expertise. We maintain exclusive partnerships with the world's finest hotels, resorts, and experience providers.</p>
+        </div>
+        <div class="about-card">
+          <h2>Our Values</h2>
+          <p style="color: #666;"><strong>Excellence:</strong> We never compromise on quality and attention to detail.</p>
+          <p style="color: #666;"><strong>Authenticity:</strong> We seek genuine, immersive cultural experiences.</p>
+          <p style="color: #666;"><strong>Sustainability:</strong> We're committed to responsible luxury travel.</p>
+          <p style="color: #666;"><strong>Innovation:</strong> We constantly evolve to exceed expectations.</p>
+        </div>
+      </section>
+      <!-- Call to Action -->
+      <section class="cta-section">
+        <h2>Ready to Start Your Journey?</h2>
+        <p style="color: white;">Let us create your perfect luxury travel experience. From initial consultation to your safe return home, we're with you every step of the way.</p>
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn">Get in Touch</a>
+          <a href="destinations.html" class="btn">Explore Destinations</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="booking.html">Book Now</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Destinations</h3>
+        <ul>
+          <li><a href="destinations.html#europe">Europe</a></li>
+          <li><a href="destinations.html#asia">Asia</a></li>
+          <li><a href="destinations.html#africa">Africa</a></li>
+          <li><a href="destinations.html#americas">Americas</a></li>
+          <li><a href="destinations.html#oceania">Oceania</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Info</h3>
+        <ul>
+          <li>📞 +1 (555) 123-4567</li>
+          <li>✉️ info@traveltales.com</li>
+          <li>📍 123 Luxury Lane, Travel City</li>
+          <li><a href="contact.html">Contact Form</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Travel-Tales. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Travel-Tales</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Travel-Tales</a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link"><b>Home</b></a></li>
+                <li><a href="destinations.html" class="nav-link"><b>Destinations</b></a></li>
+                <li><a href="about.html" class="nav-link"><b>About</b></a></li>
+                <li><a href="contact.html" class="nav-link active"><b>Contact</b></a></li>
+                <li><a href="booking.html" class="nav-link"><b>Book Now</b></a></li>
+            </ul>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="page-header">
+                <h1 class="page-title">Contact Us</h1>
+                <p class="page-subtitle" style="color: #666;">Get in touch with our travel experts to plan your next adventure</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <div>
+                            <strong>Address</strong><br>
+                            <p style="color: #666;">123 Travel Street, Adventure City<br>AC 12345, United States</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <div>
+                            <strong>Phone</strong><br>
+                            <p style="color: #666;">1 (555) 123-4567<br>+1 (555) 987-6543</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">✉</span>
+                        <div>
+                            <strong>Email</strong><br>
+                            <p style="color: #666;">info@traveltales.com<br>bookings@traveltales.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">🕐</span>
+                        <div>
+                            <strong>Business Hours</strong><br>
+                            <p style="color: #666;">Mon - Fri: 9:00 AM - 8:00 PM<br>Sat - Sun: 10:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+                    
+                <div class="form-container">
+                    <h3>Send us a Message</h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Full Name *</label>
+                            <input type="text" id="name" name="name" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address *</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject *</label>
+                            <select id="subject" name="subject" class="form-select" required>
+                                <option value="">Select a subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="booking">Booking Questions</option>
+                                <option value="destinations">Destination Information</option>
+                                <option value="support">Customer Support</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="travel-date" class="form-label">Preferred Travel Date</label>
+                            <input type="date" id="travel-date" name="travel-date" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="budget" class="form-label">Budget Range</label>
+                            <select id="budget" name="budget" class="form-select">
+                                <option value="">Select budget range</option>
+                                <option value="under-100000">Under 100,000</option>
+                                <option value="100000-200000">100,000 - 200,000</option>
+                                <option value="200000-300000">200,000 - 300,000</option>
+                                <option value="over-300000">Over 300,000</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message *</label>
+                            <textarea id="message" name="message" class="form-textarea" required placeholder="Tell us about your travel dreams, questions, or how we can help you..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" required> 
+                                I agree to receive travel tips and promotional offers from Travel-Tales
+                            </label>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- FAQ Section -->
+            <div style="margin-top: 4rem; background: white; padding: 3rem; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
+                <h2 style="text-align: center; margin-bottom: 3rem;">Frequently Asked Questions</h2>
+                <div style="display: grid; gap: 1.5rem;">
+                    <div style="border-bottom: 1px solid #eee; padding-bottom: 1rem;">
+                        <h4 style="color: #667eea; margin-bottom: 0.5rem;">How far in advance should I book my trip?</h4>
+                        <p>We recommend booking 2-3 months in advance for domestic trips and 3-6 months for international destinations to secure the best rates and availability.</p>
+                    </div>
+                    <div style="border-bottom: 1px solid #eee; padding-bottom: 1rem;">
+                        <h4 style="color: #667eea; margin-bottom: 0.5rem;">Do you offer travel insurance?</h4>
+                        <p>Yes, we partner with leading travel insurance providers to offer comprehensive coverage options for all our travelers.</p>
+                    </div>
+                    <div style="border-bottom: 1px solid #eee; padding-bottom: 1rem;">
+                        <h4 style="color: #667eea; margin-bottom: 0.5rem;">Can you create custom itineraries?</h4>
+                        <p>Absolutely! Our travel experts specialize in creating personalized itineraries tailored to your interests, budget, and travel style.</p>
+                    </div>
+            
+            <!-- Emergency Contact -->
+            <div style="margin-top: 3rem; text-align: center; padding: 2rem; background: linear-gradient(135deg, #42a5f5, #1e88e5); color: white; border-radius: 15px;">
+                <h3>Emergency Contact</h3>
+                <p>For travelers currently on a Travel-Tales trip experiencing emergencies:</p>
+                <h2 style="margin: 1rem 0;">+1 (555) 911-HELP</h2>
+                <p style="font-size: 0.9rem;">Available 24/7 for all Travel-Tales travelers</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Travel-Tales. All rights reserved. | Discover the world with us.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
