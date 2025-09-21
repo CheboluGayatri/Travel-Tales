@@ -15,7 +15,7 @@
 
     /* Navbar */
     .navbar {
-       background: linear-gradient(135deg, #42a5f5, #1e88e5);
+      background: linear-gradient(135deg, #42a5f5, #1e88e5);
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -61,7 +61,7 @@
     .hamburger {
       width: 25px;
       height: 3px;
-      background: #333;
+      background: white;
     }
 
     /* Hero Section */
@@ -123,7 +123,6 @@
       color: #1e3c72;
       margin-bottom: 1rem;
     }
-
     .about-card p {
       color: #666;
       font-size: 1rem;
@@ -205,29 +204,22 @@
         background: linear-gradient(135deg, #42a5f5, #1e88e5);
         position: absolute;
         top: 100%;
-        left: 0;
-        width: 100%;
+        right: 0;
+        width: 220px;
         padding: 1rem;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       }
-
       .nav-menu.active {
         display: flex;
       }
-
       .mobile-menu-toggle {
         display: flex;
       }
-
       .nav-menu li a {
-        text-align: center;
+        text-align: left;
         padding: 0.5rem 0;
       }
-
       .about-content {
-        grid-template-columns: 1fr;
-      }
-      .team-grid {
         grid-template-columns: 1fr;
       }
       .hero-section h1 {
@@ -237,32 +229,28 @@
         font-size: 1rem;
       }
     }
+
     @media (max-width: 480px) {
-    .hero {
+      .hero {
         height: 60vh;
         margin: 0 -20px;
-    }
-
-    .hero-content h1 {
+      }
+      .hero-content h1 {
         font-size: 2rem;
-    }
-
-    .hero-content p {
+      }
+      .hero-content p {
         font-size: 1rem;
-    }
-
-    .container {
+      }
+      .container {
         padding: 0 15px;
-    }
-
-    .form-container {
+      }
+      .form-container {
         margin: 2rem 15px;
+      }
+      .page-title {
+        font-size: 2rem;
+      }
     }
-
-    .page-title {
-        font-size: 2rem;
-    }
-}
   </style>
 </head>
 <body>
@@ -298,28 +286,29 @@
       <section class="about-content">
         <div class="about-card">
           <h2>Our Story</h2>
-          <p style="color: #666;">Founded in 2018, Travel-Tales emerged from a passion for creating unforgettable travel experiences. What started as a small boutique agency has grown into a premier luxury travel company, serving discerning travelers who seek authenticity, comfort, and exclusivity.</p>
+          <p>Founded in 2018, Travel-Tales emerged from a passion for creating unforgettable travel experiences. What started as a small boutique agency has grown into a premier luxury travel company, serving discerning travelers who seek authenticity, comfort, and exclusivity.</p>
         </div>
         <div class="about-card">
           <h2>Our Mission</h2>
-          <p style="color: #666;">To transform the way people experience the world by curating exceptional, personalized luxury travel experiences that go beyond expectations. We're not just planning trips – we're crafting life-changing adventures.</p>
+          <p>To transform the way people experience the world by curating exceptional, personalized luxury travel experiences that go beyond expectations. We're not just planning trips – we're crafting life-changing adventures.</p>
         </div>
         <div class="about-card">
           <h2>What Sets Us Apart</h2>
-          <p style="color: #666;">Our team of expert travel curators brings decades of combined experience in luxury hospitality and destination expertise. We maintain exclusive partnerships with the world's finest hotels, resorts, and experience providers.</p>
+          <p>Our team of expert travel curators brings decades of combined experience in luxury hospitality and destination expertise. We maintain exclusive partnerships with the world's finest hotels, resorts, and experience providers.</p>
         </div>
         <div class="about-card">
           <h2>Our Values</h2>
-          <p style="color: #666;"><strong>Excellence:</strong> We never compromise on quality and attention to detail.</p>
-          <p style="color: #666;"><strong>Authenticity:</strong> We seek genuine, immersive cultural experiences.</p>
-          <p style="color: #666;"><strong>Sustainability:</strong> We're committed to responsible luxury travel.</p>
-          <p style="color: #666;"><strong>Innovation:</strong> We constantly evolve to exceed expectations.</p>
+          <p><strong>Excellence:</strong> We never compromise on quality and attention to detail.</p>
+          <p><strong>Authenticity:</strong> We seek genuine, immersive cultural experiences.</p>
+          <p><strong>Sustainability:</strong> We're committed to responsible luxury travel.</p>
+          <p><strong>Innovation:</strong> We constantly evolve to exceed expectations.</p>
         </div>
       </section>
+
       <!-- Call to Action -->
       <section class="cta-section">
         <h2>Ready to Start Your Journey?</h2>
-        <p style="color: white;">Let us create your perfect luxury travel experience. From initial consultation to your safe return home, we're with you every step of the way.</p>
+        <p>Let us create your perfect luxury travel experience. From initial consultation to your safe return home, we're with you every step of the way.</p>
         <div class="cta-buttons">
           <a href="contact.html" class="btn">Get in Touch</a>
           <a href="destinations.html" class="btn">Explore Destinations</a>
@@ -364,6 +353,15 @@
       <p>&copy; 2025 Travel-Tales. All rights reserved.</p>
     </div>
   </footer>
-  <script src="script.js"></script>
+
+  <script>
+    // Mobile menu toggle functionality
+    const mobileMenuToggle = document.getElementById("mobileMenuToggle");
+    const navMenu = document.getElementById("navMenu");
+
+    mobileMenuToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+    });
+  </script>
 </body>
 </html>
