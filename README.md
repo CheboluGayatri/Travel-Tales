@@ -4,7 +4,7 @@ A travel-themed website showcasing destinations, booking options, and contact fo
 
 ---
 
-## ✨ Features
+# ✨ Features
 - Beautifully styled travel landing page
 - About, Booking, and Contact pages
 - Responsive design for mobile, tablet, and desktop
@@ -12,7 +12,7 @@ A travel-themed website showcasing destinations, booking options, and contact fo
 
 ---
 
-## 📂 Project Structure
+# 📂 Project Structure
 ```
 Travel-Tales/
 │── index.html       # Homepage
@@ -26,7 +26,7 @@ Travel-Tales/
 
 ---
 
-## 🚀 How to Use
+# 🚀 How to Use
 1. Clone the repo:
    ```bash
    git clone https://github.com/CheboluGayatri/Travel-Tales.git
@@ -36,8 +36,9 @@ Travel-Tales/
 
 ---
 
-## 🎯 Goals
+# 🎯 Goals
 - Strengthen front-end development skills
 - Build a static website with responsive layouts
 - Experiment with JavaScript for interactivity
-
+# Live Demo
+https://chebolugayatri.github.io/Travel-Tales/booking.html
